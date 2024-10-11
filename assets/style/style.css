@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #153677,#6666f6, #4e058f);
+    background-repeat: no-repeat;
+}
+
+.container {
+
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-shrink: 1;
+    padding: 10px;
+
+}
+
+.to-do img {
+    height: 25px;
+}
+
+.to-do {
+
+    text-align: center;
+    width: 550px;
+    background-color: #fff;
+    padding: 20px 60px;
+    margin: 100px auto;
+    border: 5px solid #c72eab;
+    border-radius: 20px;
+}
+
+@media (max-width: 426px) {
+    .to-do {
+        width: 300px;
+        padding: 10px 30px;
+        margin: 50px auto;
+    }
+
+    .to-do h2 {
+        font-size: 18px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    i {
+        display: block;
+        font-size: 10px;
+        padding: 10px;
+        margin: 10px;
+
+    }
+}
+
+.to-do h2 {
+    padding: 20px;
+}
+
+i {
+    display: block;
+    font-size: 10px;
+    padding: 1px;
+    margin: 2px;
+
+}
+
+.row {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+
+    border: 0;
+    border-radius: 30px;
+}
+
+.task-item-list {
+    border: 1 solid #0000;
+    width: 200px;
+}
+
+input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 20px;
+    background: transparent;
+}
+
+.btn {
+    background-color: #ff5945;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #153677;
+        color: #fff;
+    }
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+    background-image: url(../images/uncheck-256.png);
+    background-size: cover;
+    background-position: center;
+    left: -15px;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(../images/vecteezy_approved-sign-and-symbol-clip-art_22068737.png);
+
+}
+
